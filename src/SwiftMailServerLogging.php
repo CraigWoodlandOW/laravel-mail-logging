@@ -4,7 +4,7 @@ namespace CraigWoodlandOW\LaravelMailLogging;
 
 use \Swift_Plugins_Logger;
 
-class MailLogging implements Swift_Plugins_Logger
+class SwiftMailServerLogging implements Swift_Plugins_Logger
 {
     public function add($entry)
     {
