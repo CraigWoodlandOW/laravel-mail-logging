@@ -8,8 +8,8 @@ class SwiftMailServerLogging implements Swift_Plugins_Logger
 {
     public function add($entry)
     {
-		$file = fopen(storage_path('/logs/mail_' . date('Y-m-d_H-i-s') . '.log'), 'a+');
-        fwrite($file, get_class($entry) . "\r\n\r\n");
+		$file = fopen(storage_path('/logs/mail_' . date('Y-m-d') . '.log'), 'a+');
+        fwrite($file, $entry . "\r\n\r\n");
         fclose($file);
     }
 

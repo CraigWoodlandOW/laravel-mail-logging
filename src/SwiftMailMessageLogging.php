@@ -12,7 +12,7 @@ class SwiftMailMessageLogging extends Swift_Plugins_MessageLogger
      */
     public function sendPerformed(Swift_Events_SendEvent $evt)
     {
-        $file = fopen(storage_path('/logs/mail_' . date('Y-m-d_H-i-s') . '.log'), 'a+');
+        $file = fopen(storage_path('/logs/mail_' . date('Y-m-d') . '.log'), 'a+');
         fwrite($file, $evt->getMessage() . "\r\n\r\n");
         fclose($file);
     }
